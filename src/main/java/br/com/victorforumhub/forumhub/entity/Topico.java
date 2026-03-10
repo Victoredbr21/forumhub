@@ -1,5 +1,6 @@
 package br.com.victorforumhub.forumhub.entity;
 
+import br.com.victorforumhub.forumhub.model.DadosAtualizacaoTopico;
 import br.com.victorforumhub.forumhub.model.DadosCadastroTopico;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -35,4 +36,12 @@ public class Topico {
         this.autor = dados.autor();
         this.curso = dados.curso();
     }
+    public void atualizar(DadosAtualizacaoTopico dados) {
+        if (dados.titulo() != null)   this.titulo   = dados.titulo();
+        if (dados.mensagem() != null) this.mensagem = dados.mensagem();
+        if (dados.autor() != null)    this.autor    = dados.autor();
+        if (dados.curso() != null)    this.curso    = dados.curso();
+        if (dados.status() != null)   this.status   = dados.status();
+    }
+
 }

@@ -10,3 +10,4 @@ spring.flyway.enabled=true
 spring.flyway.locations=classpath:db/migration
 
 spring.application.name=forumhub
+spring.jpa.open-in-view
